@@ -1,0 +1,17 @@
+<br>
+<table class="table table-striped">
+ <mat-form-field appearance="fill">
+    <mat-label>Lempiruoka</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let food of foods" [value]="food.material">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  = = = = = = =
+  <p> Raaka-aineet: <br>{{selectedValue}} </p>
+
+</table>
+
+

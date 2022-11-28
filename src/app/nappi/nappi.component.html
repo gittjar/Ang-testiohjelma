@@ -1,0 +1,38 @@
+
+<br>
+<br>
+
+<table class="table table-striped">
+         <tr>
+            <th scope="col">Some links <mat-icon>attach_file</mat-icon></th>
+            <th scope="col">Jarno's shoes</th>
+            <th scope="col">Jarno's pens<mat-icon>create</mat-icon></th>
+         </tr>
+         
+         
+         <tr>
+         
+		 <td><mat-nav-list *ngFor="let linkki of typesOfUrls">
+ 		 <a mat-list-item href="{{ linkki.url }}"> ID: {{linkki.id}} Nimi: {{ linkki.nimi }}</a>
+		 </mat-nav-list>
+		 </td>
+		
+		 <td><mat-selection-list #shoes>  <mat-list-option *ngFor="let shoe of typesOfShoes">
+    	 {{shoe}}
+  		 </mat-list-option>
+		 </mat-selection-list>
+		 <p>
+         Jalkineita valittu: {{shoes.selectedOptions.selected.length}} kappaletta
+		 </p></td>
+		 
+		 <td>
+		 <li *ngFor="let shoecolor of typesOfColors">
+    	 {{shoecolor}}
+  	     </li>
+		 
+		 </td>
+		 
+         </tr>   
+         
+</table>
+

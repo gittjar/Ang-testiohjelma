@@ -1,0 +1,136 @@
+
+<br>
+<br>
+<button mat-button color="primary" [matMenuTriggerFor]="tools"><mat-icon>more_vert</mat-icon>Varaosat</button>
+<button mat-button color="primary" [matMenuTriggerFor]="catalogues"><mat-icon>menu</mat-icon>Tuoteluettelot</button>
+
+<mat-menu #tools="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="autonosat">Auton varaosat</button>
+  <button mat-menu-item [matMenuTriggerFor]="puutarhakalusteet">Puutarhakalusteet</button>
+  <button mat-menu-item [matMenuTriggerFor]="kasviluettelo">Kasviluettelo</button>
+</mat-menu>
+
+<mat-menu #catalogues="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="astiat">Astiat</button>
+  <button mat-menu-item>Tekstiilit</button>
+  <button mat-menu-item>Koristelu</button>
+</mat-menu>
+
+<mat-menu #astiat="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="juomalasit">Juomalasit</button>
+  <button mat-menu-item>Lautaset</button>
+  <button mat-menu-item>Ottimet</button>
+</mat-menu>
+
+<mat-menu #juomalasit="matMenu">
+  <button mat-menu-item>Vesilasit</button>
+  <button mat-menu-item>Shampanjalasit</button>
+  <button mat-menu-item>Whiskylasit</button>
+  <button mat-menu-item>Valkoviinilasit</button>
+  <button mat-menu-item>Punaviinilasit</button>
+  <button mat-menu-item>Snapsilasit</button>
+  <button mat-menu-item>Olutlasit</button>  
+</mat-menu>
+
+
+<mat-menu #autonosat="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="renkaat">Renkaat</button>
+  <button mat-menu-item [matMenuTriggerFor]="peltiosat">Peltiosat</button>
+  <button mat-menu-item [matMenuTriggerFor]="komponentit">Komponentit</button>
+  <button mat-menu-item>Maalit</button>
+  <button mat-menu-item>Sisusta</button>
+  <button mat-menu-item>Kiinnikkeet</button>
+</mat-menu>
+
+
+
+<mat-menu #puutarhakalusteet="matMenu">
+  <button mat-menu-item>Rottinkituolit</button>
+  <button mat-menu-item>Komposiittipoydat</button>
+  <button mat-menu-item disabled>Grillit</button>
+  <button mat-menu-item>Pihakeinut</button>
+  <button mat-menu-item>Katokset</button>
+  <button mat-menu-item>Kukkaruukut</button>
+  <button mat-menu-item>Kasvatuslaatikot</button>
+  <button mat-menu-item><a href="https://www.google.com/search?client=firefox-b-d&q=r%C3%A4nnirepe" target="_blank" rel="noopener noreferrer">Rannirepe</a></button>
+</mat-menu>
+
+
+
+<mat-menu #kasviluettelo="matMenu">
+  <button mat-menu-item><mat-icon>notifications_off</mat-icon>Monivuotiset kasvit</button>
+  <button mat-menu-item><mat-icon>memory</mat-icon>Yksivuotiset kasvit</button>
+  <button mat-menu-item [matMenuTriggerFor]="siemenet"><mat-icon>flash_on</mat-icon>Siemenet</button>
+</mat-menu>
+
+			<mat-menu #siemenet="matMenu">
+  			<button mat-menu-item>Unikko</button>
+  			<button mat-menu-item>Korianteri</button>
+  			<button mat-menu-item>Salaatti</button>
+  			<button mat-menu-item><a href="https://fi.wikipedia.org/wiki/Sinappikaali" target="_blank" rel="noopener noreferrer">Rucola</a></button>
+  			<button mat-menu-item><a href="https://fi.wikipedia.org/wiki/Tilli" target="_blank" rel="noopener noreferrer">Tilli</a></button>
+			</mat-menu>
+
+
+<mat-menu #renkaat="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="kesarenkaat">Kesarenkaat</button>
+  			<mat-menu #kesarenkaat='matMenu'>
+		
+  				<button mat-menu-item [matMenuTriggerFor]="pirelli">Pirelli</button>
+  				<mat-menu #pirelli='matMenu'>
+  				<button mat-menu-item>Monza Flat</button>
+  				<button mat-menu-item>All season</button>
+  				<button mat-menu-item>P Zero Winter</button>
+  				<button mat-menu-item><a href="https://www.pirelli.com/tyres/en-ww/car/catalogue/product/new-scorpion">Scorpion</a></button>
+			</mat-menu>
+  				
+  			
+  			<button mat-menu-item>Continental</button>
+  			<button mat-menu-item>Nokia</button>
+  			<button mat-menu-item>Michelin</button>
+  			<button mat-menu-item>Nagan</button>
+</mat-menu>
+
+
+
+
+			
+			
+			
+			
+  <button mat-menu-item>Talvirenkaat</button>
+  <button mat-menu-item>Kitkarenkaat</button>
+  <button mat-menu-item [matMenuTriggerFor]="telaketjut">Telaketjut</button>
+  			<mat-menu #telaketjut='matMenu'>
+  			<button mat-menu-item>14m pituus</button>
+  			<button mat-menu-item>16m pituus</button>
+  			<button mat-menu-item>24m pituus</button>
+  			<button mat-menu-item>1m pala</button>
+			</mat-menu>
+  <button mat-menu-item disabled>Puurenkaat</button>
+			</mat-menu>
+
+
+
+
+
+
+
+
+<mat-menu #peltiosat="matMenu">
+  <button mat-menu-item>Etuovi</button>
+  <button mat-menu-item>Konepelti</button>
+  <button mat-menu-item>Lokasuoja</button>
+  <button mat-menu-item>Katto</button>
+</mat-menu>
+
+<mat-menu #komponentit="matMenu">
+  <button mat-menu-item>Laturit</button>
+  <button mat-menu-item>Latauskaapelit</button>
+  <button mat-menu-item>Venttiilit</button>
+  <button mat-menu-item>Akut</button>
+  <button mat-menu-item>Katalysaattorit</button>
+  <button mat-menu-item>Ratti ja ohjausjarjestelmat</button>
+  <button mat-menu-item disabled>Navigaattori</button>
+  <button mat-menu-item disabled>Kasettisoitin</button>
+</mat-menu>

@@ -1,0 +1,14 @@
+h2 {
+  color: rgb(0, 0, 128);
+  padding: 10px;
+  font-family: arial;
+}
+
+div {
+  padding: 5px;
+  font-family: Arial;
+  }
+
+  table, th, td {
+  border:1px solid black;
+}

@@ -1,0 +1,8 @@
+.card {
+  max-width: 400px;
+}
+
+.header-image {
+  background-image: url("https://www.intermediator.fi/sites/default/files/styles/person_image_portrait/public/thumbnails/image/jarno_150x194.jpg?itok=ryd0xg7u");
+  background-size: cover;
+}

@@ -1,0 +1,57 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef>No.</th>
+    <td mat-cell *matCellDef="let element">{{element.position}}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Tuote </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <!-- Alc Column -->
+  <ng-container matColumnDef="alc">
+    <th mat-header-cell *matHeaderCellDef> Alc % </th>
+    <td mat-cell *matCellDef="let element"> {{element.alc}} </td>
+  </ng-container>
+
+  <!-- madein Column -->
+  <ng-container matColumnDef="madein">
+    <th mat-header-cell *matHeaderCellDef> Valmistusmaa </th>
+    <td mat-cell *matCellDef="let element"> {{element.madein}} </td>
+  </ng-container>
+  
+  <!-- secret Column Secret data jota ei näytetä käyttöliittymässä -->
+	
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+      mat-row
+      (click)="clickedRows.add(row)"
+      [class.demo-row-is-clicked]="clickedRows.has(row)"
+      *matRowDef="let row; columns: displayedColumns;"
+  ></tr>
+  
+</table>
+<div>
+  <h3>
+    Valitut kohteet
+  </h3>
+</div>
+
+<div *ngIf="!clickedRows.size">
+  Klikatut kohteet
+</div>
+
+<ul>
+  <li *ngFor="let clickedRow of clickedRows">
+    Valittu {{clickedRow.name}} ja valmistusmaa on {{clickedRow.madein}} ja internal info = {{clickedRow.secret}}
+  </li>
+</ul>
+

@@ -1,0 +1,118 @@
+import { Component, OnInit } from '@angular/core';
+// import { Koulu } from '../koulu';
+
+
+@Component({
+  selector: 'app-opiskelut',
+  templateUrl: './opiskelut.component.html',
+  styleUrls: ['./opiskelut.component.css'],
+   template: `
+    <input #newName
+      (keyup.enter)="addName(newName.value)"
+      (blur)="addName(newName.value); newName.value='' ">
+
+    <button type="button" (click)="addName(newName.value)">Add</button>
+
+    <ul><li *ngFor="let name of names">{{name}}</li></ul>
+  `
+})
+
+export class OpiskelutComponent implements OnInit {
+	Koulu = 
+	[    
+	{id: '1', name: 'Tuomelan ala-aste', year: '1990'},
+	{id: '2', name: 'HYK', year: '1993'},
+	{id: '3', name: 'HLTI', year: '1999'},
+	{id: '4', name: 'Haaga-Helia', year: '2009'}
+	];
+  	
+
+	
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+
+Tähän loppuu ts.file
+HTML Alla:
+
+<li *ngFor="let skole of Koulu">
+ID: {{ skole.id }} <br>
+Koulu: {{skole.name}} <br> 
+Valmistumisvuosi: {{ skole.year }}
+<br><br>
+</li>
+
+
+
+
+Tässä alla toimiva component:
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-tour',
+  template: `
+    <input #newName
+      (keyup.enter)="addName(newName.value)"
+      (blur)="addName(newName.value); newName.value='' ">    
+
+    <button type="button" (click)="addName(newName.value)">Add</button>
+
+    <ul><li *ngFor="let school of schools">{{school}}</li></ul>
+  `
+})
+export class OpiskelutComponent {
+  schools = ['Tuomelan ala-aste', 'HYK', 'HLTI', 'Haaga-Helia'];
+  
+  
+  addName(newName: string) {
+    if (newName) {
+      this.schools.push(newName);
+    }
+  }
+}
+
+
+
+
+Kahdella painikkeella toimiva alla:
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-tour',
+  template: `
+   
+   Add School:
+    <input #newName
+      (keyup.enter)="addName(newName.value)">
+         <button type="button" (click)="addName(newName.value)">Add</button>
+  Add Aste:
+  	<input #newTaso
+      (keyup.enter)="addTaso(newTaso.value)">  
+  	<button type="button" (click)="addTaso(newTaso.value)">Add</button>
+    
+
+    <ul><li *ngFor="let school of schools">{{school}}</li></ul>
+    <ul><li *ngFor="let aste of asteet">{{aste}}</li></ul>
+  `
+})
+export class OpiskelutComponent {
+  schools = ['Tuomela', 'HYK', 'HLTI', 'Haaga-Helia'];
+  asteet = ['Ala-aste', 'Yla-aste', 'Kauppaopisto', 'Korkeakoulu'];
+  
+  addName(newName: string) {
+    if (newName) {
+      this.schools.push(newName);
+    }
+  }
+  
+    addTaso(newTaso: string) {
+    if (newTaso) {
+      this.asteet.push(newTaso);
+    }
+  }
+}

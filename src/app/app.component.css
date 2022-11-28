@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(249, 242, 249);
+}
+h1 {
+  color: rgb(128, 128, 128);
+  padding: 50px;
+  font-family: arial;
+}
+p {
+  color: rgb(255, 255, 255);
+  font-family: arial;
+}
+
+link {color: rgb(0, 0, 128)}
+
+table, th, td {
+  border: 1px solid; padding: 15px; text-align: center;
+}

@@ -1,0 +1,8 @@
+<label for="clipboard-textarea">Kopioitava teksti</label>
+<textarea id="clipboard-textarea" cols="100" rows="10" [(ngModel)]="value"></textarea>
+<button mat-button color="warn" [cdkCopyToClipboard]="value">Kopioi muistiin</button>
+<br>
+<br>
+<label for="clipboard-textarea">Kopioitava teksti</label>
+<textarea id="clipboard-textarea" cols="50" rows="10" [(ngModel)]="value2"></textarea>
+<button mat-button color="primary" [cdkCopyToClipboard]="value2">Kopioi muistiin</button>
